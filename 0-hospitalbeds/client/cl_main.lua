@@ -81,8 +81,8 @@ CreateThread(function()
     while true do
         local wait = 1500
         for k, v in pairs(Config.beds) do
-            wait = 0
             if #(GetEntityCoords(PlayerPedId()) - vector3(v.pos.x, v.pos.y, v.pos.z)) < 3.0 then
+		wait = 0
                 if not v.busy then
                     DrawMarker(2, v.pos.x, v.pos.y, v.pos.z - 0.50, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.2, 0.2, 0.1, 255, 255, 255, 150, true, true, 5, nil, nil, false)
                     if #(GetEntityCoords(PlayerPedId()) - vector3(v.pos.x, v.pos.y, v.pos.z)) < 1.65 then
