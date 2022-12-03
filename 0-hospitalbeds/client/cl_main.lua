@@ -78,7 +78,7 @@ end
 
 CreateThread(function()
     Wait(1000)
-    while true do
+    while ESX do
         local wait = 1500
         for k, v in pairs(Config.beds) do
             if #(GetEntityCoords(PlayerPedId()) - vector3(v.pos.x, v.pos.y, v.pos.z)) < 3.0 then
